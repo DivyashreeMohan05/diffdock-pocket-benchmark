@@ -32,7 +32,16 @@ docker.io/dhanya24/diffdock-pocket-v8:prototype
 
 Conda specification in `environment.yml`.
 
-**Training.** 3 epochs, flexible sidechains, pocket reduction (centre-distance mode, 10 Å buffer), EMA rate 0.999, batch size 2, 6 convolution layers, learning rate 1e-3 with plateau scheduler. Full configuration in `prototype/training/checkpoint/model_parameters.yml`.
+**Training.** Two runs: a short prototype run (3 epochs, configuration in
+`prototype/training/checkpoint/model_parameters.yml`) and a longer full-dataset
+run. Both use flexible sidechains, pocket reduction, EMA (0.999), batch size 2,
+6 convolution layers, learning rate 1e-3 with plateau scheduler.
+
+Training curves for the full run are in
+`notebooks/results_visualization_full_dataset.ipynb`. Training loss did not
+decrease and validation loss oscillated across many orders of magnitude, so the
+full-dataset results below characterise an unconverged model rather than
+DiffDock-Pocket's published performance.
 
 **Inference.** 20 denoising steps, sampling 1 or 3 poses per complex.
 
