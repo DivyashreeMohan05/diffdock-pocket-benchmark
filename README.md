@@ -4,6 +4,8 @@ Evaluation of [DiffDock-Pocket](https://github.com/plainerman/DiffDock-Pocket) â
 
 Seminar project, *Benchmarking DL-based Docking Tools* (SS 2026), Volkamer Lab, Saarland University.
 
+Restructured from the seminar repository [volkamerlab/DLDockingBenchSeminar](https://github.com/volkamerlab/DLDockingBenchSeminar) (branch `Diffdock-pocket`), shared with permission.
+
 ## Results
 
 Top-ranked pose per complex:
