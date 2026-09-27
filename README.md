@@ -16,6 +16,8 @@ Top-ranked pose per complex:
 | PoseBusters (1 pose) | 306 | 60.8% | 22.9% | 1.76 Å | 3.9% |
 | PoseBusters (3 poses) | 300 | 58.7% | 26.0% | 1.82 Å | 4.7% |
 
+These numbers characterise our training run, which did not converge — training loss rose and validation loss oscillated across many orders of magnitude (see `notebooks/results_visualization_full_dataset.ipynb`). They are not a measurement of DiffDock-Pocket's published performance.
+
 **The prototype number is misleading.** 116 of its 136 complexes carry the same ligand (LU8). 95.6% measures memorisation, not docking.
 
 **Accuracy is moderate; physical validity is the limiting factor.** About half of top-ranked poses fall within 2 Å of the crystal ligand, but fewer than 7% satisfy all PoseBusters checks. Predicted ligands are placed approximately correctly while violating basic geometric and steric constraints.
