@@ -1,3 +1,6 @@
+# Prototype training configuration (3 epochs).
+# The full-dataset results in full/results/ come from a separate longer run
+# whose configuration file was not retained.
 adamw: false
 all_atoms: true
 asyncronous_noise_schedule: false
