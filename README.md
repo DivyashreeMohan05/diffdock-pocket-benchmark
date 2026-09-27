@@ -1,12 +1,4 @@
-![Cumulative RMSD success](assets/rmsd_success_curve.png)
-
-![PoseBusters check pass rates](assets/posebusters_checks.png)
-
-Failures concentrate in four checks: minimum distance to protein (18% pass), volume overlap with protein (29%), internal steric clash (61%) and internal energy (78%). The other eighteen checks pass at essentially 100% — poses are chemically well-formed but placed too far into the protein.
-
-![Main test set vs PoseBusters-filtered](assets/benchmark_comparison.png)
-
-Accuracy is higher on the PoseBusters-filtered subset (60.8% vs 50.2% under 2 Å), consistent with its curated, higher-quality structures.# Benchmarking DiffDock-Pocket
+# Benchmarking DiffDock-Pocket
 
 Evaluation of [DiffDock-Pocket](https://github.com/plainerman/DiffDock-Pocket) — a diffusion-based docking model with flexible sidechains — on LP-HiQBind and PoseBusters test sets.
 
@@ -29,6 +21,17 @@ Top-ranked pose per complex:
 **Accuracy is moderate; physical validity is the limiting factor.** About half of top-ranked poses fall within 2 Å of the crystal ligand, but fewer than 7% satisfy all PoseBusters checks. Predicted ligands are placed approximately correctly while violating basic geometric and steric constraints.
 
 **Additional sampling did not improve accuracy.** Increasing from 1 to 3 poses per complex left RMSD < 2 Å unchanged on full_test (50.2% → 50.3%) and reduced it on the PoseBusters subset (60.8% → 58.7%). The confidence model does not reliably rank the better sample first.
+
+![Cumulative RMSD success](assets/rmsd_success_curve.png)
+
+![PoseBusters check pass rates](assets/posebusters_checks.png)
+
+Failures concentrate in four checks: minimum distance to protein (18% pass), volume overlap with protein (29%), internal steric clash (61%) and internal energy (78%). The other eighteen checks pass at essentially 100% — poses are chemically well-formed but placed too far into the protein.
+
+![Main test set vs PoseBusters-filtered](assets/benchmark_comparison.png)
+
+Accuracy is higher on the PoseBusters-filtered subset (60.8% vs 50.2% under 2 Å), consistent with its curated, higher-quality structures.
+
 
 ## Setup
 
