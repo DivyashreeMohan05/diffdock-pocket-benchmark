@@ -1,0 +1,19 @@
+universe = docker
+docker_image = docker.io/dhanya24/diffdock-pocket-fixed:v8
+
+executable = /home/bdldt_team003/DLDockingBenchSeminar/training/run_training_full.sh
+
+output = /home/bdldt_team003/DLDockingBenchSeminar/training/logs/training_full.out
+error  = /home/bdldt_team003/DLDockingBenchSeminar/training/logs/training_full.err
+log    = /home/bdldt_team003/DLDockingBenchSeminar/training/logs/training_full.log
+
+request_GPUs   = 1
+request_CPUs   = 4
+request_memory = 64GB
+
+requirements = (UidDomain == "cs.uni-saarland.de") && regexp("A100", TARGET.GPUs_DeviceName)
++WantGPUHomeMounted = true
++WantGPULab = true
+Rank = (GPUs_DeviceName == "NVIDIA A100-SXM4-80GB")
+
+queue

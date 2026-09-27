@@ -1,0 +1,12 @@
+universe = docker
+docker_image = docker.io/dhanya24/diffdock-pocket-fixed:v8
+executable = /home/bdldt_team005/DLDockingBenchSeminar/run_full_test_eval_pb.sh
+output = /home/bdldt_team005/DLDockingBenchSeminar/inference/logs/full_test_eval_pb.out
+error = /home/bdldt_team005/DLDockingBenchSeminar/inference/logs/full_test_eval_pb.err
+log = /home/bdldt_team005/DLDockingBenchSeminar/inference/logs/full_test_eval_pb.log
+request_GPUs = 0
+request_CPUs = 4
+request_memory = 16GB
+request_disk = 10GB
+requirements = (UidDomain == "cs.uni-saarland.de")
+queue

@@ -1,0 +1,19 @@
+universe = docker
+docker_image = docker.io/dhanya24/diffdock-pocket-fixed:v8
+environment = "CUDA_LAUNCH_BLOCKING=1"
+executable = /home/bdldt_team005/DLDockingBenchSeminar/inference/run_inference_full.sh
+
+output = /home/bdldt_team005/DLDockingBenchSeminar/inference/logs/inference_full.out
+error  = /home/bdldt_team005/DLDockingBenchSeminar/inference/logs/inference_full.err
+log    = /home/bdldt_team005/DLDockingBenchSeminar/inference/logs/inference_full.log
+
+request_GPUs   = 1
+request_CPUs   = 4
+request_memory = 32GB
+request_disk   = 20GB
+
+requirements = UidDomain == "cs.uni-saarland.de"
++WantGPUHomeMounted = true
+Rank = (CUDADeviceName == "A100-SXM4-80GB")
+
+queue

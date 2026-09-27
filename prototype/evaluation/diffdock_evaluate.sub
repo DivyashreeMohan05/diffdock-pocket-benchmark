@@ -1,0 +1,17 @@
+universe = docker
+docker_image = docker.io/dhanya24/diffdock-pocket-fixed:v8
+
+executable = /home/bdldt_team005/DLDockingBenchSeminar/DiffDock-Pocket/run_evaluate.sh
+
+output = /home/bdldt_team005/DLDockingBenchSeminar/DiffDock-Pocket/logs/evaluate.out
+error  = /home/bdldt_team005/DLDockingBenchSeminar/DiffDock-Pocket/logs/evaluate.err
+log    = /home/bdldt_team005/DLDockingBenchSeminar/DiffDock-Pocket/logs/evaluate.log
+
+request_GPUs   = 0
+request_CPUs   = 4
+request_memory = 16GB
+request_disk   = 10GB
+
+requirements = (UidDomain == "cs.uni-saarland.de")
+
+queue

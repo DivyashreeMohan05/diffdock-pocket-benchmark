@@ -1,0 +1,20 @@
+universe = docker
+docker_image = docker.io/dhanya24/diffdock-pocket-fixed:v8
+
+executable = /home/bdldt_team005/DLDockingBenchSeminar/DiffDock-Pocket/run_inference_remaining.sh
+
+output = /home/bdldt_team005/DLDockingBenchSeminar/DiffDock-Pocket/logs/inference_remaining.out
+error  = /home/bdldt_team005/DLDockingBenchSeminar/DiffDock-Pocket/logs/inference_remaining.err
+log    = /home/bdldt_team005/DLDockingBenchSeminar/DiffDock-Pocket/logs/inference_remaining.log
+
+request_GPUs   = 1
+request_CPUs   = 4
+request_memory = 32GB
+request_disk   = 20GB
+
+requirements = (UidDomain == "cs.uni-saarland.de")
+gpus_minimum_capability = 3.5
++WantGPUHomeMounted = true
++WantGPULab = true
+
+queue

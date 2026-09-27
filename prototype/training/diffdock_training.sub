@@ -1,0 +1,18 @@
+universe = docker
+docker_image = docker.io/dhanya24/diffdock-pocket-fixed:v8
+
+executable = /home/bdldt_team003/DiffDock-Pocket/run_training.sh
+
+output = /home/bdldt_team003/DiffDock-Pocket/logs/training.out
+error  = /home/bdldt_team003/DiffDock-Pocket/logs/training.err
+log    = /home/bdldt_team003/DiffDock-Pocket/logs/training.log
+
+request_GPUs   = 1
+request_CPUs   = 4
+request_memory = 32GB
+request_disk   = 20GB
+
+requirements = UidDomain == "cs.uni-saarland.de"
++WantGPUHomeMounted = true
+
+queue
