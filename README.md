@@ -133,7 +133,7 @@ environment.yml
 
 ## Credits
 
-**Dhanya**. Supervised by **Prof. Volkamer** and **Hamza Ibrahim**, Volkamer Lab. Model and core code by the DiffDock-Pocket authors — see upstream repository.
+My Teammate-**Dhanya**. Supervised by **Prof. Volkamer** and **Hamza Ibrahim**, Volkamer Lab. Model and core code by the DiffDock-Pocket authors — see upstream repository.
 
 
 
