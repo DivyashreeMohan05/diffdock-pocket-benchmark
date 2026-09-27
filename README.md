@@ -1,4 +1,12 @@
-# Benchmarking DiffDock-Pocket
+![Cumulative RMSD success](assets/rmsd_success_curve.png)
+
+![PoseBusters check pass rates](assets/posebusters_checks.png)
+
+Failures concentrate in four checks: minimum distance to protein (18% pass), volume overlap with protein (29%), internal steric clash (61%) and internal energy (78%). The other eighteen checks pass at essentially 100% — poses are chemically well-formed but placed too far into the protein.
+
+![Main test set vs PoseBusters-filtered](assets/benchmark_comparison.png)
+
+Accuracy is higher on the PoseBusters-filtered subset (60.8% vs 50.2% under 2 Å), consistent with its curated, higher-quality structures.# Benchmarking DiffDock-Pocket
 
 Evaluation of [DiffDock-Pocket](https://github.com/plainerman/DiffDock-Pocket) — a diffusion-based docking model with flexible sidechains — on LP-HiQBind and PoseBusters test sets.
 
